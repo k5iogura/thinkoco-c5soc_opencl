@@ -43,7 +43,7 @@ mkimage   -A arm -O linux -T script -C none -a 0 -e 0 -n "My script" -d boot.scr
 ## 4. Build zImage and socfpga.dtb
 ```
 cd ~/sdcard/
-git clone https://github.com/thinkoco/linux-socfpga.git
+git clone https://github.com/k5iogura/thinkoco-linux-socfpga.git
 cd linux-socfpga
 git checkout -b socfpga-opencl_3.18 origin/socfpga-3.18
 cp config_opencl .config
