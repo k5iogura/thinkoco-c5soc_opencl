@@ -76,6 +76,15 @@ cd ~/sdcard/
 Mount proc, sys, dev, dev/pts to new fileystem
 ```
 sudo ./ch-mount.sh -m ./rootfs/
+
+check current status by ps command,,,
+ps aux | grep bash
+1000      2375  0.0  0.1  28472  4464 pts/6    Ss   09:10   0:00 -bash
+1000      3065  0.0  0.1  28628  4624 pts/6    S    09:11   0:00 bash
+1000      8648  0.0  0.1  28400  4384 pts/15   Ss+  09:15   0:00 -bash
+root     20564  0.0  0.0  17596  1460 pts/6    S    09:33   0:00 /bin/bash ./ch-mount.sh -m ./rootfs/
+root     20576  0.0  0.2 4137448 9416 pts/6    S    09:33   0:00 /usr/bin/qemu-arm-static /bin/bash -i
+root     20744  0.0  0.1 4137448 5880 pts/6    S+   09:35   0:00 /usr/bin/qemu-arm-static /bin/grep bash
 ```
 Now,in chroot environment
 
